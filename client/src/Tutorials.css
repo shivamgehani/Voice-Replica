@@ -1,0 +1,135 @@
+/* Enhanced CSS for Voice Replica System (HCI Optimized) */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('/images/bg.webp') !important;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.tutorials-container {
+    max-width: 1300px;
+    padding: 20px;
+    background-color: rgb(18, 18, 18); /* Dark with 70% opacity */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #333;
+    position: relative;
+    z-index: 1; /* Ensure content is above the background */
+}
+
+.tutorials-title {
+    font-size: 2.5em;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+.tutorials-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #b0b0b0;
+}
+
+.tutorials-voice-selection {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.voice-card {
+    padding: 15px;
+    background: #252525;
+    border: 2px solid #444;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.voice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+    border-color: #ff9800;
+}
+
+.voice-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff9800;
+}
+
+.voice-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: #ffcc80;
+}
+
+.tutorials-start-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.tutorials-start-button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.tutorials-logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.tutorials-logout-button:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Accessibility considerations */
+input[type="radio"] {
+    accent-color: #ff9800;
+}
+
+button:focus, input:focus {
+    outline: 2px solid #ff9800;
+    outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff9800;
+    border-radius: 5px;
+}

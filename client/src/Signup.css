@@ -1,0 +1,134 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Full Page Styling */
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #2b3034, #1a1d20);
+    background-image: url('/images/background.webp');
+}
+
+/* Signup Container */
+.signup-container {
+    display: flex;
+    width: 90%;
+    max-width: 1100px;
+    background: #4c4c63;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Left Side (Image) */
+.signup-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/images/login.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Right Side (Form) */
+.signup-right {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #4c4c63;
+}
+
+/* Signup Title */
+.signup-title {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Labels */
+.signup-label {
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.signup-input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid #555;
+    border-radius: 10px;
+    background: #3c3c5d;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.signup-input:focus {
+    border-color: #007bff;
+}
+
+/* Signup Button */
+.signup-button {
+    width: 100%;
+    padding: 14px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.signup-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Login Redirect Text */
+.login-text {
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Login Link */
+.login-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00aaff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #0077cc;
+    text-decoration: underline;
+}

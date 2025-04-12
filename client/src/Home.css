@@ -1,0 +1,124 @@
+/* Home.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #8d7575;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-container {
+    max-width: 1100px;
+    
+    width: 250%;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.home-title {
+    text-align: center;
+    color: #333;
+}
+
+.home-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.home-file-input {
+    display: block;
+    margin: 10px 0;
+}
+
+.home-generate-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.home-generate-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.home-logs {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.home-audio-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.home-download-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.feedback-prompt {
+    margin-top: 20px;
+    padding: 15px;
+    background: #ffebcd;
+    border: 1px solid #f0c36d;
+    border-radius: 5px;
+}
+
+.feedback-prompt textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback-prompt button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.home-logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home-logout-button:hover {
+    background: #d32f2f;
+}

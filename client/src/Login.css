@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #2b3034, #1a1d20);
+    background-image: url('/images/background.webp');
+}
+
+.login-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 1000px;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background: #4c4c63;
+}
+
+.login-image {
+    width: 50%;
+    background: url('/images/login.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.login-box {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: #4c4c63;
+}
+
+.login-title {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.login-label {
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 5px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid #555;
+    border-radius: 10px;
+    background: #3c3c5d;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-input:focus {
+    border-color: #007bff;
+}
+
+.login-button {
+    padding: 14px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.signup-text {
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+}
+
+.signup-link {
+    color: #00aaff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #b0b0b0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.show-password:hover {
+    color: #007bff;
+}
+
+.forgot-password {
+    text-align: right;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.remember-me label {
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.social-login button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.social-login button.google {
+    background: #db4437;
+    color: white;
+}
+
+.social-login button.facebook {
+    background: #3b5998;
+    color: white;
+}
+
+.social-login button:hover {
+    opacity: 0.9;
+}
+
+.privacy-policy {
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-top: 20px;
+}
+
+.privacy-policy a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
+}
