@@ -104,11 +104,19 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            <button className="home-logout-button" onClick={handleLogout}>
-                Logout
-            </button>
+        <header className="tutorials-header">
+        <div className="tutorials-header__brand">Voice Replica System</div>
+        <div className="tutorials-header__nav">
+          
+        <button className="tutorials-header__button" onClick={() => navigate("/tutorials")}>Home</button>
+          <button className="tutorials-header__button" onClick={() => navigate("/trump")}>PM Modi</button>
+          <button className="tutorials-header__button" onClick={() => navigate("/shivam")}>Lj Speech</button>
+          <button className="tutorials-header__button" onClick={() => navigate("/home")}>Replica Your own voice</button>
+          <button className="tutorials-header__logout" onClick={handleLogout}>Logout</button>
+        </div>
+      </header>
 
-            <h1 className="home-title">Text-to-Speech Voice Generator</h1>
+            <h1 className="home-title">Replica your own voice (Text-to-Speech)</h1>
 
             <textarea
                 className="home-textarea"

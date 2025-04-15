@@ -28,6 +28,11 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url('/images/bg.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #e0e0e0;
 }
 
 h1 {

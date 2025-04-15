@@ -133,9 +133,16 @@ const fetchFeedbacks = async () => {
         <div className="admin-dashboard">
             <h1>Admin Dashboard</h1>
             {/* Logout Button */}
-            <button className="logout-button" onClick={handleLogout}>
-                Logout
-            </button>
+            <header className="tutorials-header">
+        <div className="tutorials-header__brand">Voice Replica System</div>
+        <div className="tutorials-header__nav">
+        <button className="tutorials-header__button" onClick={() => navigate("/tutorials")}>Home</button>
+          <button className="tutorials-header__button" onClick={() => navigate("/trump")}>PM Modi</button>
+          <button className="tutorials-header__button" onClick={() => navigate("/shivam")}>Lj Speech</button>
+          <button className="tutorials-header__button" onClick={() => navigate("/home")}>Replica Your own voice</button>
+          <button className="tutorials-header__logout" onClick={handleLogout}>Logout</button>
+        </div>
+      </header>
 
             {/* Buttons to show users, add user, and feedbacks */}
             <div className="action-buttons">

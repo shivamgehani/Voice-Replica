@@ -5,10 +5,12 @@ body {
     margin: 0;
     padding: 0;
     background: #9895a0;
+    padding-top: 50px;
 }
 
 .admin-dashboard {
-    padding: 20px;
+    
+    padding: 60px;
     max-width: 1200px;
     margin: 0 auto;
     background: #92bf92;

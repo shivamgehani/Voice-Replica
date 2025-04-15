@@ -1,135 +1,280 @@
-/* Enhanced CSS for Voice Replica System (HCI Optimized) */
-
-body {
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-image: url('/images/bg.webp') !important;
+    box-sizing: border-box;
+  }
+  
+  .tutorials-page {
+    display: flex;
+    flex-direction: column;
+    width: 1500px;
+    height: 1300px;
+    background-image: url('/images/bg.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+  }
+    
+  /* Header Styles */
+  .tutorials-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(26, 26, 26, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #333;
+    z-index: 1000;
+    height: 70px;
+  }
+  
+  .tutorials-header__brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9800;
+  }
+  
+  .tutorials-header__nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .tutorials-header__button {
+    background: transparent;
+    border: none;
+    color: #e0e0e0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+    border-radius: 4px;
+  }
+  
+  .tutorials-header__button:hover {
+    color: #ff9800;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .tutorials-header__logout {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .tutorials-header__logout:hover {
+    background: #b71c1c;
+  }
+  
+  /* Main Content Styles */
+  .tutorials-main {
+    
+    padding-top: 340px; /* Header height */
+    padding-bottom: 10px; /* Footer height */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-.tutorials-container {
-    max-width: 1300px;
-    padding: 20px;
-    background-color: rgb(18, 18, 18); /* Dark with 70% opacity */
+  }
+  
+  .tutorials-container {
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .tutorials-content {
+    background-color: rgba(18, 18, 18, 0.9);
+    border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
+    border: 1px solid #444;
+    padding: 2.5rem;
     text-align: center;
-    border: 1px solid #333;
-    position: relative;
-    z-index: 1; /* Ensure content is above the background */
-}
-
-.tutorials-title {
-    font-size: 2.5em;
+  }
+  
+  .tutorials-content__title {
+    font-size: 2.5rem;
     color: #ff9800;
-    margin-bottom: 20px;
-}
-
-.tutorials-description {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .tutorials-content__description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
     color: #b0b0b0;
-}
-
-.tutorials-voice-selection {
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .description-paragraph {
+    margin-bottom: 1rem;
+  }
+  
+  .features-list {
+    list-style-type: none;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+  }
+  
+  .features-list__item {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    text-align: left;
+  }
+  
+  .features-list__item:before {
+    content: "•";
+    color: #ff9800;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+  }
+  
+  .feature-highlight {
+    color: #ff9800;
+    font-weight: 500;
+  }
+  
+  /* Voice Selection Section */
+  .voice-selection {
+    margin: 2.5rem 0;
+  }
+  
+  .voice-selection__title {
+    font-size: 1.8rem;
+    color: #ff9800;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .tutorials-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+  }
+  
+  .tutorials-option {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.voice-card {
-    padding: 15px;
-    background: #252525;
-    border: 2px solid #444;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .tutorials-option input[type="radio"] {
+    display: none;
+  }
+  
+  .tutorials-option__card {
+    padding: 1.5rem 1rem;
+    background: rgba(37, 37, 37, 0.8);
+    border: 2px solid #555;
     border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.voice-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .tutorials-option input[type="radio"]:checked + .tutorials-option__card {
     border-color: #ff9800;
-}
-
-.voice-image {
+    background: rgba(50, 50, 50, 0.9);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+  }
+  
+  .tutorials-option__image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ff9800;
-}
-
-.voice-name {
-    display: block;
-    margin-top: 10px;
-    font-size: 1.3em;
-    color: #ffcc80;
-}
-
-.tutorials-start-button {
-    display: block;
-    width: 100%;
-    padding: 15px;
+    border: 3px solid #444;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .tutorials-option input[type="radio"]:checked + .tutorials-option__card .tutorials-option__image {
+    border-color: #ff9800;
+  }
+  
+  .tutorials-option__name {
+    font-size: 1rem;
+    color: #e0e0e0;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .tutorials-content__button {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
     background: #4CAF50;
-    color: #fff;
+    color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 1.5em;
+    border-radius: 8px;
+    font-size: 1.2rem;
     cursor: pointer;
-    margin-top: 30px;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.tutorials-start-button:hover {
-    background: #45a049;
-    transform: scale(1.05);
-}
-
-.tutorials-logout-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background: #f44336;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.tutorials-logout-button:hover {
-    background: #d32f2f;
-    transform: scale(1.05);
-}
-
-/* Accessibility considerations */
-input[type="radio"] {
-    accent-color: #ff9800;
-}
-
-button:focus, input:focus {
-    outline: 2px solid #ff9800;
-    outline-offset: 2px;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #1e1e1e;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #ff9800;
-    border-radius: 5px;
-}
+    margin-top: 1.5rem;
+    transition: all 0.3s;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  .tutorials-content__button:hover {
+    background: #388E3C;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer Styles */
+  .tutorials-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(26, 26, 26, 0.95);
+    padding: 1rem;
+    border-top: 1px solid #333;
+    z-index: 1000;
+    height: 60px;
+  }
+  
+  .tutorials-footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .tutorials-footer__links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .tutorials-footer__links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .tutorials-footer__links a:hover {
+    color: #ff9800;
+  }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { useAuth } from './AuthContext.jsx';
 import './Login.css';
 
 function Login() {
@@ -9,6 +10,7 @@ function Login() {
     const [showPassword, setShowPassword] = useState(false);
     const [rememberMe, setRememberMe] = useState(false);
     const navigate = useNavigate();
+    const { login } = useAuth(); // ✅ Context-based login function
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,7 +24,8 @@ function Login() {
                     localStorage.removeItem('rememberMe');
                     localStorage.removeItem('email');
                 }
-                navigate('/admin-dashboard'); // Redirect to admin dashboard
+                login({ email: 'admin' }); // ✅ Set admin in context
+                navigate('/admin-dashboard');
                 return;
             }
 
@@ -36,7 +39,8 @@ function Login() {
                     localStorage.removeItem('rememberMe');
                     localStorage.removeItem('email');
                 }
-                navigate('/tutorials'); // Redirect to tutorials page for regular users
+                login({ email }); // ✅ Set regular user in context
+                navigate('/tutorials');
             } else {
                 alert("Invalid credentials");
             }
@@ -55,7 +59,7 @@ function Login() {
             <div className="login-container">
                 <div className="login-image"></div>
                 <div className="login-box">
-                    <h2 className="login-title">Welcome to Login Page </h2>
+                    <h2 className="login-title">Welcome to Login Page</h2>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="email" className="login-label">Email</label>
                         <input
